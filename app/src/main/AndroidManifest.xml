@@ -17,7 +17,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:allowBackup"
         tools:targetApi="n">
-        <activity android:name=".settings.SettingsHostActivity"></activity>
+        <activity android:name=".settings.SettingsHostActivity" />
         <activity
             android:name=".suda_life.SudaLifeActivity"
             android:label="苏大生活" />

@@ -14,7 +14,8 @@ abstract class BaseListFragment : BaseFragment() {
     protected lateinit var mRecyclerView: RecyclerView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return ConstraintLayout(context).apply {
+        return context?.let {
+            ConstraintLayout(it).apply {
 
             mRecyclerView = RecyclerView(context, null, R.attr.verticalRecyclerViewStyle).apply {
                 overScrollMode = View.OVER_SCROLL_NEVER
@@ -27,6 +28,7 @@ abstract class BaseListFragment : BaseFragment() {
                 startToStart = ConstraintSet.PARENT_ID
                 endToEnd = ConstraintSet.PARENT_ID
             })
+        }
         }
 
     }

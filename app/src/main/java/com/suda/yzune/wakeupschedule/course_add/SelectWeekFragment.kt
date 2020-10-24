@@ -32,11 +32,11 @@ class SelectWeekFragment : BaseDialogFragment() {
         arguments?.let {
             position = it.getInt("position")
         }
-        colorSurface = context!!.styledColor(R.attr.colorOnSurface)
+        colorSurface = requireContext().styledColor(R.attr.colorOnSurface)
         liveData.observe(this, Observer {
             if (it?.size == viewModel.maxWeek) {
                 tv_all.setTextColor(Color.WHITE)
-                tv_all.background = ContextCompat.getDrawable(context!!, R.drawable.select_textview_bg)
+                tv_all.background = ContextCompat.getDrawable(requireContext(), R.drawable.select_textview_bg)
             }
             if (it?.size != viewModel.maxWeek) {
                 tv_all.setTextColor(colorSurface)
@@ -45,7 +45,7 @@ class SelectWeekFragment : BaseDialogFragment() {
             val flag = viewModel.judgeType(it!!)
             if (flag == 1) {
                 tv_type1.setTextColor(Color.WHITE)
-                tv_type1.background = ContextCompat.getDrawable(context!!, R.drawable.select_textview_bg)
+                tv_type1.background = ContextCompat.getDrawable(requireContext(), R.drawable.select_textview_bg)
             }
             if (flag != 1) {
                 tv_type1.setTextColor(colorSurface)
@@ -53,7 +53,7 @@ class SelectWeekFragment : BaseDialogFragment() {
             }
             if (flag == 2) {
                 tv_type2.setTextColor(Color.WHITE)
-                tv_type2.background = ContextCompat.getDrawable(context!!, R.drawable.select_textview_bg)
+                tv_type2.background = ContextCompat.getDrawable(requireContext(), R.drawable.select_textview_bg)
             }
             if (flag != 2) {
                 tv_type2.setTextColor(colorSurface)
@@ -145,7 +145,7 @@ class SelectWeekFragment : BaseDialogFragment() {
 
         btn_save.setOnClickListener {
             if (result.size == 0) {
-                Toasty.error(context!!.applicationContext, "请至少选择一周").show()
+                Toasty.error(requireContext().applicationContext, "请至少选择一周").show()
             } else {
                 viewModel.editList[position].weekList.value = result
                 dismiss()

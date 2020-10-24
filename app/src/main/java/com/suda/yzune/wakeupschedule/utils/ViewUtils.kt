@@ -1,5 +1,6 @@
 package com.suda.yzune.wakeupschedule.utils
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.res.ColorStateList
@@ -65,6 +66,7 @@ object ViewUtils {
      * @param context
      * @return
      */
+    @SuppressLint("PrivateApi")
     fun checkDeviceHasNavigationBar(context: Context): Boolean {
         var hasNavigationBar = false
         val rs = context.resources

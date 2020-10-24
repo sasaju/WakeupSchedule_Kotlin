@@ -38,8 +38,8 @@ abstract class BaseDialogFragment : DialogFragment() {
     }
 
     override fun show(manager: FragmentManager, tag: String?) {
-        mDismissed = false
-        mShownByMe = true
+//        mDismissed = false
+//        mShownByMe = true
         val ft = manager.beginTransaction()
         ft.add(this, tag)
         ft.commitAllowingStateLoss()

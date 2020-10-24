@@ -1,5 +1,6 @@
 package com.suda.yzune.wakeupschedule.course_add
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Dialog
 import android.appwidget.AppWidgetManager
@@ -148,6 +149,7 @@ class AddCourseActivity : BaseListActivity(), ColorPickerFragment.ColorPickerDia
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun initAdapter(baseBean: CourseBaseBean) {
         adapter.setListener(this)
         adapter.addHeaderView(initHeaderView(baseBean))
@@ -238,6 +240,7 @@ class AddCourseActivity : BaseListActivity(), ColorPickerFragment.ColorPickerDia
         mRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 
+    @SuppressLint("InflateParams")
     private fun initHeaderView(baseBean: CourseBaseBean): View {
         val view = LayoutInflater.from(this).inflate(R.layout.item_add_course_base, null)
         etName = view.findViewById(R.id.et_name)
