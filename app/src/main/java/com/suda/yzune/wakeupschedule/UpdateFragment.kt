@@ -1,5 +1,6 @@
 package com.suda.yzune.wakeupschedule
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -24,9 +25,10 @@ class UpdateFragment : BaseDialogFragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tv_old_version.text = "当前版本：" + UpdateUtils.getVersionName(context!!.applicationContext)
+        tv_old_version.text = "当前版本：" + UpdateUtils.getVersionName(requireContext().applicationContext)
         tv_new_version.text = "最新版本：" + updateInfo.VersionName
         tv_info.text = updateInfo.VersionInfo
         tv_visit.setOnClickListener {
@@ -35,16 +37,16 @@ class UpdateFragment : BaseDialogFragment() {
                     val uri = Uri.parse("market://details?id=com.suda.yzune.wakeupschedule.pro")
                     val intent = Intent(Intent.ACTION_VIEW, uri)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    activity!!.startActivity(intent)
+                    requireActivity().startActivity(intent)
                 } catch (e: Exception) {
-                    Toasty.info(context!!.applicationContext, "没有检测到应用商店o(╥﹏╥)o").show()
+                    Toasty.info(requireContext().applicationContext, "没有检测到应用商店o(╥﹏╥)o").show()
                 }
             } else {
                 val intent = Intent()
                 intent.action = "android.intent.action.VIEW"
                 val contentUrl = Uri.parse("https://www.coolapk.com/apk/com.suda.yzune.wakeupschedule")
                 intent.data = contentUrl
-                context!!.startActivity(intent)
+                requireContext().startActivity(intent)
             }
             dismiss()
         }

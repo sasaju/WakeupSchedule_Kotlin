@@ -117,16 +117,19 @@ dependencies {
     def room_version = "2.2.3"
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation "androidx.appcompat:appcompat:1.2.0-alpha02"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation "androidx.appcompat:appcompat:1.3.0-alpha02"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3'
+    //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation 'com.google.android.material:material:1.2.0-alpha04'
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    //noinspection GradleDependency
     implementation "androidx.room:room-runtime:$room_version"
+    //noinspection GradleDependency
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
@@ -140,15 +143,17 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    //noinspection GradleDependency
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:0.7.3'
     implementation 'com.github.jahirfiquitiva:TextDrawable:1.0.3'
     implementation 'com.bigkoo:quicksidebar:1.0.3'
     implementation 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
     testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation('net.sf.biweekly:biweekly:0.6.3') {
         exclude module: 'jackson-core'
         exclude group: 'com.fasterxml.jackson.core'

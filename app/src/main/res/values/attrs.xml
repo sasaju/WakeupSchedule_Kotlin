@@ -11,7 +11,7 @@
             <enum name="regular" value="0" />
             <enum name="large" value="1" />
         </attr>
-        <attr name="cpv_colorShape" />
+<!--        <attr name="cpv_colorShape" />-->
         <attr name="cpv_dialogTitle" format="reference" />
         <attr name="cpv_colorPresets" format="reference" />
         <attr name="cpv_showColorShades" format="boolean|reference" />

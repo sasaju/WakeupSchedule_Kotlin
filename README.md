@@ -1,26 +1,15 @@
 # WakeUp课程表 3.612
 
-[Google Play 下载](https://play.google.com/store/apps/details?id=com.suda.yzune.wakeupschedule.pro) | [酷安下载](https://www.coolapk.com/apk/159120)
 
 ## 声明
 
-开源旨在可以降低后来者的门槛，借鉴可以，但是希望在相关 App 中能有所声明。
+该软件由WakeUp课程表fork而来，感谢开源软件的作者们
 
-教务网页解析的部分单独抽出了一个库，见 [CourseAdapter](https://github.com/YZune/CourseAdapter)
-
-近期要忙于毕设，欢迎大佬们 PR
+fork的目的主要是适配河北大学相关内容
 
 ## 上架情况
 
-截至2020.02.10
-
-- 酷安[√] 19万
-- 应用宝[√] 12674
-- 魅族应用商店[√] 21590
-- 小米应用商店[√] 61799
-- OPPO应用商店[√] 19.3万
-- VIVO应用商店[√] 23万
-- 华为应用商店[√] 51.9万
+未上架
 
 ## 开源相关
 
@@ -44,23 +33,11 @@
 - [biweekly](https://github.com/mangstadt/biweekly)
 - [appcenter-sdk-android](https://github.com/microsoft/appcenter-sdk-android)
 
-### 参考项目
-
-苏大的正方教务模拟登录和课程解析部分参考了[另一个课程表项目](https://github.com/mnnyang/ClassSchedule)，不过我对课程解析部分改动非常大，导入更为准确。
-
 ## TODO
 
-- 集成“咩咩”
-- 支持课程笔记
-- 直接写入系统日历
-- ~~完善对方正教务课程的解析~~
-- 适配已经提交数据的学校
-- ~~数据备份和恢复（用课程文件导出导入实现了，还支持分享）~~
-- ~~课程分享~~
-- ~~增加对夏冬令时的支持（可以设置任意数量的时间表）~~
-- 注册登录，小范围的社交，主要是为社团的活动服务
-- 完全迁移至AndroidX
-- 国际化
+本人希望全面适配河北大学的相关内容:
+- 简化相关设置，去掉繁琐复杂的导入过程(如设置周数、设置时间、设置一天的总课数)
+- 适配河北大学的自习室查询和成绩查询
 
 ## License
 
